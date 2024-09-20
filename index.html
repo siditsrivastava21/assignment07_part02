@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+      }
+
+      .form-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .input{
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      #rating {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+
+      .submit-btn {
+        margin-right: 5px;
+      }
+
+      .submit-btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Feedback Form</h2>
+      <form action="#">
+        <label for="feedback-type">Feedback Type:</label>
+        <select class="input" id="feedback-type" name="feedback-type" required>
+          <option value="general">General</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="complaint">Complaint</option>
+        </select>
+
+        <label for="message">Your Message:</label>
+        <textarea
+        class="input"
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Write your message here"
+          required
+        ></textarea>
+
+        <label for="rating">Rate our website:</label>
+        <div id="rating">
+          <input type="radio" id="rate1" name="rating" value="1" />
+          <label for="rate1">1</label>
+
+          <input type="radio" id="rate2" name="rating" value="2" />
+          <label for="rate2">2</label>
+
+          <input type="radio" id="rate3" name="rating" value="3" />
+          <label for="rate3">3</label>
+
+          <input type="radio" id="rate4" name="rating" value="4" />
+          <label for="rate4">4</label>
+
+          <input type="radio" id="rate5" name="rating" value="5" />
+          <label for="rate5">5</label>
+        </div>
+
+        <label for="age">Your Age (10-100):</label>
+        <input class="input" type="number" id="age" name="age" min="10" max="100" required />
+
+        <label for="email">Your Email:</label>
+        <input
+        class="input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="password">Your Password (Min 8 characters):</label>
+        <input
+        class="input"
+          type="password"
+          id="password"
+          name="password"
+          minlength="8"
+          placeholder="Enter your password"
+          required
+        />
+
+        <label for="website">Your Website (optional):</label>
+        <input
+        class="input"
+          type="url"
+          id="website"
+          name="website"
+          placeholder="Enter your website URL"
+        />
+
+        <label>
+          <input type="checkbox" id="terms" name="terms" required /> I agree to
+          the terms and conditions
+        </label>
+        <br>
+        <input class="submit-btn" type="submit" value="Submit Feedback" />
+      </form>
+    </div>
+  </body>
+</html>
